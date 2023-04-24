@@ -5,6 +5,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <div className='bg-lightGrayishCyan'>
+      <App />
+     </div>
   </React.StrictMode>,
 )
