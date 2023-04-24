@@ -1,11 +1,13 @@
-import Calculator from "./components/Calculator"
+import Calculator from "./components/Calculator";
+import logo from "./assets/images/logo.svg";
 
 function App() {
   return (
-    <div className="grid grid-cols-1 h-screen items-center place-items-center">
+    <div className="flex h-screen flex-col items-center justify-center gap-10">
+      <img className="w-16" src={logo} alt="logo" />
       <Calculator />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

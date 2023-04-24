@@ -3,6 +3,9 @@ export default {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        mono: ["Space Mono", "monospace"],
+      },
       colors: {
         strongCyan: "hsl(172, 67%, 45%)",
         veryDarkCyan: "hsl(183, 100%, 15%)",
@@ -14,6 +17,5 @@ export default {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
 }
 
