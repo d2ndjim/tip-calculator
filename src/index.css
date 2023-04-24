@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+  background-color: hsl(185, 41%, 84%);
+}
+
+.bill-container input {
+  background-image: url('./assets/images/icon-dollar.svg');
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: 5% center;
+}
+
+.bill-container input:focus,
+.bill-container input:hover,
+.bill-container input:active {
+  outline: 2px solid #26c0ab;
+}
+.bill-container input::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+.people-container input {
+  background-image: url('./assets/images/icon-person.svg');
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: 5% center;
+}
+
+.people-container input:focus,
+.people-container input:hover,
+.people-container input:active {
+  outline: 2px solid #26c0ab;
+}
+
+.people-container input::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+.tip-input input::placeholder {
+  color: hsl(184, 14%, 56%);
+  text-align: center;
+  /* font-size: x-large; */
+}
