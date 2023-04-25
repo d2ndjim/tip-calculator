@@ -28,7 +28,7 @@ Users should be able to:
 
 
 ### Links
-- Live Site URL: [tip-calculator](https://tip-calculator-7ko2.vercel.app/)
+- Live Site URL: [tip-calculator](https://tip-calculator-d2ndjim.vercel.app/)
 
 ## My process
 
