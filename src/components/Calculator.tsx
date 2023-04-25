@@ -13,17 +13,11 @@ const Calculator = () => {
   const [total, setTotal] = useState(0);
   const [activeButton, setActiveButton] = useState<ActiveButton>(null);
 
-  console.log(bill);
-  console.log(tip);
-  console.log(people);
-  console.log(tipAmount);
-  console.log(total);
-
   useEffect(() => {
     if (
-      bill > 0 &&
+      bill !== null && bill > 0 &&
       tip > 0 &&
-      people > 0
+      people !== null && people > 0
     ) {
       const tipAmount = (bill * tip) / 100 / people;
       const totalAmount = bill / people + tipAmount;
