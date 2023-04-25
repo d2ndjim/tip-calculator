@@ -1,7 +1,19 @@
 import React from "react";
 import { AmountsProps } from "../types";
 
-const Amounts: React.FC<AmountsProps> = ({ setTotal, setTipAmount, tipAmount, total, tip, bill, people, setTip, setPeople, setBill, setActiveButton }) => {
+const Amounts: React.FC<AmountsProps> = ({
+  setTotal,
+  setTipAmount,
+  tipAmount,
+  total,
+  tip,
+  bill,
+  people,
+  setTip,
+  setPeople,
+  setBill,
+  setActiveButton,
+}) => {
   const handleReset = () => {
     setTip(undefined);
     setBill(undefined);
@@ -38,11 +50,15 @@ const Amounts: React.FC<AmountsProps> = ({ setTotal, setTipAmount, tipAmount, to
           )}
         </div>
       </div>
-      <div className="self-center w-full">
+      <div className="w-full self-center">
         <button
           type="button"
-          className="border-1 hover:bg-[#9FE8DF] text-xl h-11 text-[#155C59] rounded-lg bg-strongCyan w-full disabled:bg-grayishCyan disabled:text-[#0D686D] disabled:opacity-30 disabled:cursor-default"
-          disabled={(tip === 0 || tip === undefined)  && (bill === 0 || undefined) && (people === 0 || undefined)}
+          className="border-1 h-11 w-full rounded-lg bg-strongCyan text-xl text-[#155C59] hover:bg-[#9FE8DF] disabled:cursor-default disabled:bg-grayishCyan disabled:text-[#0D686D] disabled:opacity-30"
+          disabled={
+            (tip === 0 || tip === undefined) &&
+            (bill === 0 || undefined) &&
+            (people === 0 || undefined)
+          }
           onClick={handleReset}
         >
           Reset

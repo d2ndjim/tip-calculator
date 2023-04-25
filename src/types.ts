@@ -4,7 +4,7 @@ export type PercentageProps = {
   setActiveButton: (activeButton: ActiveButton) => void;
 };
 
-export type ActiveButton = 0 | 1 | 2 | 3| 4 | null;
+export type ActiveButton = 0 | 1 | 2 | 3 | 4 | null;
 
 // export type Value = number | undefined;
 
@@ -28,9 +28,8 @@ export type InputProps = {
   classname: string;
   bill?: number;
   people?: number;
-  value: number | undefined
+  value: number | undefined;
   setValue: (value: number | undefined) => void;
   setBill?: (bill: number) => void;
   setPeople?: (people: number) => void;
- 
 };

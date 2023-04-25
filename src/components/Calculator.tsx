@@ -14,14 +14,21 @@ const Calculator = () => {
   const [value, setValue] = useState<number | undefined>(undefined);
   const [activeButton, setActiveButton] = useState<ActiveButton>(null);
 
-  console.log(bill)
-  console.log(tip)
-  console.log(people)
-  console.log(tipAmount)
-  console.log(total)
+  console.log(bill);
+  console.log(tip);
+  console.log(people);
+  console.log(tipAmount);
+  console.log(total);
 
   useEffect(() => {
-    if (bill !== undefined && bill > 0 && tip !== undefined && tip > 0 && people !== undefined && people > 0) {
+    if (
+      bill !== undefined &&
+      bill > 0 &&
+      tip !== undefined &&
+      tip > 0 &&
+      people !== undefined &&
+      people > 0
+    ) {
       const tipAmount = (bill * tip) / 100 / people;
       const totalAmount = bill / people + tipAmount;
       setTipAmount(parseFloat(tipAmount.toFixed(2)));
@@ -33,17 +40,40 @@ const Calculator = () => {
     <div className="h-96 w-2/3 rounded-2xl border border-solid border-white bg-White px-6 py-8 shadow">
       <div className="flex gap-8">
         <div className="flex w-full flex-col gap-8">
-          <Input setValue={setValue} value={value === bill ? bill : undefined} label="Bill" classname="bill-container" setBill={setBill} />
-          <Percentage activeButton={activeButton} setActiveButton={setActiveButton} setTip={setTip} />
           <Input
-            setValue={setValue} 
+            setValue={setValue}
+            value={value === bill ? bill : undefined}
+            label="Bill"
+            classname="bill-container"
+            setBill={setBill}
+          />
+          <Percentage
+            activeButton={activeButton}
+            setActiveButton={setActiveButton}
+            setTip={setTip}
+          />
+          <Input
+            setValue={setValue}
             value={value === people ? people : undefined}
             label="Number of People"
             classname="people-container"
             setPeople={setPeople}
           />
         </div>
-        <Amounts setValue={setValue} setActiveButton={setActiveButton}  setTotal={setTotal} setTipAmount={setTipAmount} setPeople={setPeople} setTip={setTip} setBill={setBill} bill={bill} tip={tip} people={people} tipAmount={tipAmount} total={total} />
+        <Amounts
+          setValue={setValue}
+          setActiveButton={setActiveButton}
+          setTotal={setTotal}
+          setTipAmount={setTipAmount}
+          setPeople={setPeople}
+          setTip={setTip}
+          setBill={setBill}
+          bill={bill}
+          tip={tip}
+          people={people}
+          tipAmount={tipAmount}
+          total={total}
+        />
       </div>
     </div>
   );

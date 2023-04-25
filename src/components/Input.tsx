@@ -7,11 +7,8 @@ const Input: React.FC<InputProps> = ({
   setBill,
   setPeople,
   value,
-  setValue
+  setValue,
 }) => {
-  
-
-
   return (
     <div className={`${classname}`}>
       <label
