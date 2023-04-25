@@ -1,6 +1,7 @@
 export type PercentageProps = {
-  setTip: (tip: number) => void;
+  setTip: (tip: Tip) => void;
   activeButton: ActiveButton;
+  tip: Tip;
   setActiveButton: (activeButton: ActiveButton) => void;
 };
 
@@ -8,15 +9,17 @@ export type ActiveButton = 0 | 1 | 2 | 3 | 4 | null;
 
 export type Bill = number | null;
 
+export type Tip = number | null;
+
 export type People = number | null;
 
 export type AmountsProps = {
   tipAmount: number;
   total: number;
   bill: Bill;
-  tip: number;
+  tip: Tip;
   people: Bill;
-  setTip: (tip: number) => void;
+  setTip: (tip: Tip) => void;
   setBill: (bill: Bill) => void;
   setPeople: (people: People) => void;
   setTotal: (total: number) => void;

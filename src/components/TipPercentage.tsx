@@ -5,6 +5,7 @@ const Percentage: React.FC<PercentageProps> = ({
   setTip,
   activeButton,
   setActiveButton,
+  tip
 }) => {
   const handleButtonClick = (index: ActiveButton, tip: number) => {
     setTip(tip);
@@ -69,6 +70,7 @@ const Percentage: React.FC<PercentageProps> = ({
           <input
             type="number"
             placeholder="Custom"
+            value={tip === null ? '' : tip}
             className="w-full appearance-none rounded border-gray-200 bg-gray-200 p-5 text-right font-mono text-lg leading-tight text-veryDarkCyan focus:border-gray-500 focus:outline-none md:p-3"
             onChange={(e) => setTip(e.target.valueAsNumber)}
           />

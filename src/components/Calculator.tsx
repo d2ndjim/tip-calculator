@@ -3,18 +3,18 @@ import { useState, useEffect } from "react";
 import Amounts from "./Amounts";
 import Input from "./Input";
 import Percentage from "./TipPercentage";
-import { ActiveButton, Bill, People } from "../types";
+import { ActiveButton, Bill, People, Tip } from "../types";
 
 const Calculator = () => {
   const [bill, setBill] = useState<Bill>(null);
-  const [tip, setTip] = useState(0);
+  const [tip, setTip] = useState<Tip>(null);
   const [tipAmount, setTipAmount] = useState(0);
   const [people, setPeople] = useState<People>(null);
   const [total, setTotal] = useState(0);
   const [activeButton, setActiveButton] = useState<ActiveButton>(null);
 
   useEffect(() => {
-    if (bill !== null && bill > 0 && tip > 0 && people !== null && people > 0) {
+    if (bill !== null && bill > 0 && tip !== null && tip > 0 && people !== null && people > 0) {
       const tipAmount = (bill * tip) / 100 / people;
       const totalAmount = bill / people + tipAmount;
       setTipAmount(parseFloat(tipAmount.toFixed(2)));
@@ -34,6 +34,7 @@ const Calculator = () => {
             setBill={setBill}
           />
           <Percentage
+            tip={tip}
             activeButton={activeButton}
             setActiveButton={setActiveButton}
             setTip={setTip}

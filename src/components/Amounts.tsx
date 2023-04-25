@@ -15,7 +15,7 @@ const Amounts: React.FC<AmountsProps> = ({
   setActiveButton,
 }) => {
   const handleReset = () => {
-    setTip(0);
+    setTip(null);
     setBill(null);
     setPeople(null);
     setTipAmount(0);
