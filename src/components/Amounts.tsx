@@ -16,8 +16,8 @@ const Amounts: React.FC<AmountsProps> = ({
 }) => {
   const handleReset = () => {
     setTip(0);
-    setBill(0);
-    setPeople(0);
+    setBill(null);
+    setPeople(null);
     setTipAmount(0);
     setTotal(0);
     setActiveButton(null);
@@ -54,9 +54,9 @@ const Amounts: React.FC<AmountsProps> = ({
           type="button"
           className="border-1 h-14 w-full rounded-lg bg-strongCyan text-xl text-[#155C59] hover:bg-[#9FE8DF] disabled:cursor-default disabled:bg-grayishCyan disabled:text-[#0D686D] disabled:opacity-30"
           disabled={
-            (tip === 0) &&
-            (bill === 0) &&
-            (people === 0)
+            (tip === 0 || tip === null) &&
+            (bill === 0 || bill === null) &&
+            (people === 0 || people === null)
           }
           onClick={handleReset}
         >

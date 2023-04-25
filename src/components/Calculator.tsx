@@ -3,13 +3,13 @@ import { useState, useEffect } from "react";
 import Amounts from "./Amounts";
 import Input from "./Input";
 import Percentage from "./TipPercentage";
-import { ActiveButton } from "../types";
+import { ActiveButton, Bill, People } from "../types";
 
 const Calculator = () => {
-  const [bill, setBill] = useState(0);
+  const [bill, setBill] = useState<Bill>(null);
   const [tip, setTip] = useState(0);
   const [tipAmount, setTipAmount] = useState(0);
-  const [people, setPeople] = useState(0);
+  const [people, setPeople] = useState<People>(null);
   const [total, setTotal] = useState(0);
   const [activeButton, setActiveButton] = useState<ActiveButton>(null);
 
