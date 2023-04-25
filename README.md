@@ -24,12 +24,11 @@ Users should be able to:
 - Calculate the correct tip and total cost of the bill per person
 
 ### Screenshot
+![image](https://user-images.githubusercontent.com/73438276/234264575-27bd9a24-5fa5-4721-9f0b-3b3a2f7cd53e.png)
 
 
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [tip-calculator](https://tip-calculator-7ko2.vercel.app/)
 
 ## My process
 
