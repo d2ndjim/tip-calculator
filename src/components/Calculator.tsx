@@ -14,11 +14,7 @@ const Calculator = () => {
   const [activeButton, setActiveButton] = useState<ActiveButton>(null);
 
   useEffect(() => {
-    if (
-      bill !== null && bill > 0 &&
-      tip > 0 &&
-      people !== null && people > 0
-    ) {
+    if (bill !== null && bill > 0 && tip > 0 && people !== null && people > 0) {
       const tipAmount = (bill * tip) / 100 / people;
       const totalAmount = bill / people + tipAmount;
       setTipAmount(parseFloat(tipAmount.toFixed(2)));
@@ -27,8 +23,8 @@ const Calculator = () => {
   }, [bill, tip, people]);
 
   return (
-    <div className="md:h-96 h-full md:w-2/3 rounded-2xl border border-solid border-white bg-White px-6 py-6 shadow">
-      <div className="flex flex-col md:flex-row gap-8">
+    <div className="h-full rounded-2xl border border-solid border-white bg-White px-6 py-6 shadow md:h-96 md:w-2/3">
+      <div className="flex flex-col gap-8 md:flex-row">
         <div className="flex w-full flex-col gap-9 md:gap-6">
           <Input
             mode="bill"
