@@ -36,13 +36,21 @@ Users should be able to:
 
 ### Built with
 - [React](https://reactjs.org/) - JS library
-- [Vite](https://vitejs.dev/guide/)
-- [TailwindCSS](https://tailwindcss.com/docs/)
+- [Typescript]
+- [Vite](https://vitejs.dev/guide/) - Bundler
+- [TailwindCSS](https://tailwindcss.com/docs/) - Styling
+- Eslint && Prettier
 
 ### Getting a local copy
 ```
 git clone  <https://github.com/d2ndjim/tip-calculator.git>
+```
+
+```
 yarn install
+```
+
+```
 yarn run dev
 ```
 ## Author
