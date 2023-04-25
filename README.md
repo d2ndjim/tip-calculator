@@ -25,7 +25,6 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
 
 ### Links
 
@@ -36,7 +35,7 @@ Users should be able to:
 
 ### Built with
 - [React](https://reactjs.org/) - JS library
-- [Typescript]
+- [Typescript](https://www.typescriptlang.org/) - Typing
 - [Vite](https://vitejs.dev/guide/) - Bundler
 - [TailwindCSS](https://tailwindcss.com/docs/) - Styling
 - Eslint && Prettier
@@ -56,5 +55,5 @@ yarn run dev
 ## Author
 
 - Website - [Lekan Jimoh](https://d2ndjim.tech)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@d2ndjim](https://www.frontendmentor.io/profile/d2ndjim)
 - Twitter - [@d2ndjim](https://www.twitter.com/d2ndjim_)
