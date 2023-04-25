@@ -13,9 +13,9 @@ export type People = number | null;
 export type AmountsProps = {
   tipAmount: number;
   total: number;
-  bill: number;
+  bill: Bill;
   tip: number;
-  people: number | undefined;
+  people: Bill;
   setTip: (tip: number) => void;
   setBill: (bill: Bill) => void;
   setPeople: (people: People) => void;
