@@ -1,11 +1,29 @@
 import React from "react";
+import { AmountsProps } from "../types";
 
-type AmountsProps = {
-  tipAmount: number;
-  total: number;
-};
+const Amounts: React.FC<AmountsProps> = ({
+  setTotal,
+  setTipAmount,
+  tipAmount,
+  total,
+  tip,
+  bill,
+  people,
+  setTip,
+  setPeople,
+  setBill,
+  setActiveButton,
+}) => {
+  const handleReset = () => {
+    setTip(undefined);
+    setBill(undefined);
+    setPeople(undefined);
+    setTipAmount(0);
+    setTotal(0);
+    setActiveButton(null);
+    // setValue(undefined);
+  };
 
-const Amounts: React.FC<AmountsProps> = ({ tipAmount, total }) => {
   return (
     <div className="flex h-80 w-full flex-col justify-between rounded-lg bg-veryDarkCyan p-8 py-10 font-mono text-White">
       <div className="flex flex-col gap-5">
@@ -32,10 +50,16 @@ const Amounts: React.FC<AmountsProps> = ({ tipAmount, total }) => {
           )}
         </div>
       </div>
-      <div className="self-center">
+      <div className="w-full self-center">
         <button
           type="button"
-          className="border-1 h-10 rounded-lg bg-strongCyan px-24 "
+          className="border-1 h-11 w-full rounded-lg bg-strongCyan text-xl text-[#155C59] hover:bg-[#9FE8DF] disabled:cursor-default disabled:bg-grayishCyan disabled:text-[#0D686D] disabled:opacity-30"
+          disabled={
+            (tip === 0 || tip === undefined) &&
+            (bill === 0 || undefined) &&
+            (people === 0 || undefined)
+          }
+          onClick={handleReset}
         >
           Reset
         </button>
