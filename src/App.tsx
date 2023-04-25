@@ -3,8 +3,8 @@ import logo from "./assets/images/logo.svg";
 
 function App() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-10">
-      <img className="w-16" src={logo} alt="logo" />
+    <div className="flex mt-16 md:h-screen flex-col items-center justify-center gap-10">
+      <img className="md:w-16 w-20" src={logo} alt="logo" />
       <Calculator />
     </div>
   );

@@ -37,9 +37,9 @@ const Calculator = () => {
   }, [bill, tip, people]);
 
   return (
-    <div className="h-96 w-2/3 rounded-2xl border border-solid border-white bg-White px-6 py-8 shadow">
-      <div className="flex gap-8">
-        <div className="flex w-full flex-col gap-8">
+    <div className="md:h-96 h-full md:w-2/3 rounded-2xl border border-solid border-white bg-White px-6 py-6 shadow">
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex w-full flex-col gap-9 md:gap-6">
           <Input
             setValue={setValue}
             value={value === bill ? bill : undefined}
@@ -61,7 +61,7 @@ const Calculator = () => {
           />
         </div>
         <Amounts
-          setValue={setValue}
+          // setValue={setValue}
           setActiveButton={setActiveButton}
           setTotal={setTotal}
           setTipAmount={setTipAmount}

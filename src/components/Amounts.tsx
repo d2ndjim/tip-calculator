@@ -33,9 +33,9 @@ const Amounts: React.FC<AmountsProps> = ({
             <p className="text-sm text-darkGrayishCyan">/ person</p>
           </div>
           {tipAmount > 0 ? (
-            <h1 className="text-3xl text-strongCyan">${tipAmount}</h1>
+            <h1 className="text-4xl text-strongCyan">${tipAmount}</h1>
           ) : (
-            <h1 className="text-3xl text-strongCyan">$0.00</h1>
+            <h1 className="text-4xl text-strongCyan">$0.00</h1>
           )}
         </div>
         <div className="flex items-center justify-between">
@@ -44,16 +44,16 @@ const Amounts: React.FC<AmountsProps> = ({
             <p className="text-sm text-darkGrayishCyan">/ person</p>
           </div>
           {total > 0 ? (
-            <h1 className="text-3xl text-strongCyan">${total}</h1>
+            <h1 className="text-4xl text-strongCyan">${total}</h1>
           ) : (
-            <h1 className="text-3xl text-strongCyan">$0.00</h1>
+            <h1 className="text-4xl text-strongCyan">$0.00</h1>
           )}
         </div>
       </div>
       <div className="w-full self-center">
         <button
           type="button"
-          className="border-1 h-11 w-full rounded-lg bg-strongCyan text-xl text-[#155C59] hover:bg-[#9FE8DF] disabled:cursor-default disabled:bg-grayishCyan disabled:text-[#0D686D] disabled:opacity-30"
+          className="border-1 h-14 w-full rounded-lg bg-strongCyan text-xl text-[#155C59] hover:bg-[#9FE8DF] disabled:cursor-default disabled:bg-grayishCyan disabled:text-[#0D686D] disabled:opacity-30"
           disabled={
             (tip === 0 || tip === undefined) &&
             (bill === 0 || undefined) &&

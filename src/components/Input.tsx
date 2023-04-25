@@ -21,7 +21,7 @@ const Input: React.FC<InputProps> = ({
         type="number"
         placeholder="0"
         value={value}
-        className="block h-9 w-full appearance-none rounded border-gray-200 bg-gray-200 px-4 py-3 text-right font-mono text-xl leading-tight text-veryDarkCyan focus:border-gray-500 focus:outline-none"
+        className="block md:h-10 h-11 w-full appearance-none rounded border-gray-200 bg-gray-200 p-4 text-right font-mono text-2xl leading-tight text-veryDarkCyan focus:border-gray-500 focus:outline-none"
         onChange={(e) => {
           setValue(e.target.valueAsNumber);
           if (setBill) {
