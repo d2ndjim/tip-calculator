@@ -6,12 +6,11 @@ import Percentage from "./TipPercentage";
 import { ActiveButton } from "../types";
 
 const Calculator = () => {
-  const [bill, setBill] = useState<number | undefined>(0);
-  const [tip, setTip] = useState<number | undefined>(0);
+  const [bill, setBill] = useState(0);
+  const [tip, setTip] = useState(0);
   const [tipAmount, setTipAmount] = useState(0);
-  const [people, setPeople] = useState<number | undefined>(0);
+  const [people, setPeople] = useState(0);
   const [total, setTotal] = useState(0);
-  const [value, setValue] = useState<number | undefined>(undefined);
   const [activeButton, setActiveButton] = useState<ActiveButton>(null);
 
   console.log(bill);
@@ -22,11 +21,8 @@ const Calculator = () => {
 
   useEffect(() => {
     if (
-      bill !== undefined &&
       bill > 0 &&
-      tip !== undefined &&
       tip > 0 &&
-      people !== undefined &&
       people > 0
     ) {
       const tipAmount = (bill * tip) / 100 / people;
@@ -41,8 +37,8 @@ const Calculator = () => {
       <div className="flex flex-col md:flex-row gap-8">
         <div className="flex w-full flex-col gap-9 md:gap-6">
           <Input
-            setValue={setValue}
-            value={value === bill ? bill : undefined}
+            mode="bill"
+            bill={bill}
             label="Bill"
             classname="bill-container"
             setBill={setBill}
@@ -53,15 +49,14 @@ const Calculator = () => {
             setTip={setTip}
           />
           <Input
-            setValue={setValue}
-            value={value === people ? people : undefined}
+            mode="people"
+            people={people}
             label="Number of People"
             classname="people-container"
             setPeople={setPeople}
           />
         </div>
         <Amounts
-          // setValue={setValue}
           setActiveButton={setActiveButton}
           setTotal={setTotal}
           setTipAmount={setTipAmount}

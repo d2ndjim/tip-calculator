@@ -5,7 +5,6 @@
 
 body {
   background-color: hsl(185, 41%, 84%);
-  /* font-size: 24px; */
 }
 
 .bill-container input {
@@ -16,8 +15,7 @@ body {
 }
 
 .bill-container input:focus,
-.bill-container input:hover,
-.bill-container input:active {
+.bill-container input:hover {
   outline: 2px solid #26c0ab;
 }
 .bill-container input::placeholder {
@@ -32,8 +30,7 @@ body {
 }
 
 .people-container input:focus,
-.people-container input:hover,
-.people-container input:active {
+.people-container input:hover {
   outline: 2px solid #26c0ab;
 }
 
@@ -42,8 +39,7 @@ body {
 }
 
 .tip-input input:focus,
-.tip-input input:hover,
-.tip-input input:active {
+.tip-input input:hover {
   outline: 2px solid #26c0ab;
 }
 

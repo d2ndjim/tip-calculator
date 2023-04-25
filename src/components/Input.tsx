@@ -5,9 +5,10 @@ const Input: React.FC<InputProps> = ({
   label,
   classname,
   setBill,
+  mode,
+  bill,
+  people,
   setPeople,
-  value,
-  setValue,
 }) => {
   return (
     <div className={`${classname}`}>
@@ -20,10 +21,9 @@ const Input: React.FC<InputProps> = ({
       <input
         type="number"
         placeholder="0"
-        value={value}
-        className="block md:h-10 h-11 w-full appearance-none rounded border-gray-200 bg-gray-200 p-4 text-right font-mono text-2xl leading-tight text-veryDarkCyan focus:border-gray-500 focus:outline-none"
+        value={mode === "bill" ? bill : people}
+        className="block md:h-10 h-11 w-full rounded border-gray-200 bg-gray-200 p-4 text-right font-mono text-2xl text-veryDarkCyan focus:border-gray-500 focus:outline-none"
         onChange={(e) => {
-          setValue(e.target.valueAsNumber);
           if (setBill) {
             setBill(e.target.valueAsNumber);
           } else if (setPeople) {
